@@ -1,5 +1,5 @@
-# The-Breakfast-Bunch
-CS 3354 Project
+# Chess Game
+CS 3354 Object-Oriented Design and Programming Project
 By Lyndsey and Alexa
 
 # Overview
@@ -15,7 +15,7 @@ This project is a chess game built in Java Swing. It integrates backend chess lo
 - Save and load game state
 
 # How to Run
-1. Open the project in Eclipse.
+1. Open the project in Visual Studio Code or your preferred code editor.
 2. Run `main.Main`.
 3. Use the GUI to play by clicking a piece and then its destination square.
 OR
