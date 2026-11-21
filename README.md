@@ -16,12 +16,9 @@ This project is a chess game built in Java Swing. It integrates backend chess lo
 
 # How to Run
 1. Open the project in Visual Studio Code or your preferred code editor.
-2. Run `main.Main`.
-3. Use the GUI to play by clicking a piece and then its destination square.
-OR
-1. Right click on Main.java
-2. Hit Run Java
-3. Use the GUI to play by clicking a piece and then its destination square.
+2. Right click on Main.java
+3. Hit Run Java
+4. Use the GUI to play by clicking a piece and then its destination square.
 
 # Project Structure
 - `board` — board storage
