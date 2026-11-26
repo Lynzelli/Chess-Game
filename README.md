@@ -3,7 +3,7 @@ CS 3354 Object-Oriented Design and Programming Project
 By Lyndsey and Alexa
 
 # Overview
-This project is a chess game built in Java Swing. It integrates backend chess logic, board state management, piece movement rules, and a playable interface.
+This project is a chess game built in Java. It integrates backend chess logic, board state management, piece movement rules, and a playable interface.
 
 # Features
 - Full 8x8 chess board
