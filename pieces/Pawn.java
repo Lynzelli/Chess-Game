@@ -2,22 +2,20 @@ package pieces;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import board.Board;
 import utils.Position;
 
-/**
- * Represents a pawn chess piece.
- */
-public class Pawn extends Piece {
-
+//Represents a pawn chess piece.
+public class Pawn extends Piece 
+{
     /**
      * Constructs a Pawn.
      *
      * @param color the color of the pawn
      * @param position the current position
      */
-    public Pawn(String color, Position position) {
+    public Pawn(String color, Position position) 
+    {
         super(color, position);
     }
 
@@ -33,7 +31,13 @@ public class Pawn extends Piece {
         int col = position.getColumn();
 
         int r1 = row + dir;
-        if (r1 >= 0 && r1 < 8 && board.getPiece(new Position(r1, col)) == null) 
+
+        if (r1 < 0 || r1 > 7)
+        {
+            return moves;
+        }
+
+        if (board.getPiece(new Position(r1, col)) == null) 
         {
             moves.add(new Position(r1, col));
         }
@@ -67,31 +71,4 @@ public class Pawn extends Piece {
     {
         return color.equalsIgnoreCase("white") ? "wp" : "bp";
     }
-
-    // Returns the squares that this pawn can attack.
-    @Override
-    public List<Position> attackSquares(Board board)
-    {
-        List<Position> attacks = new ArrayList<>();
-
-        int dir = color.equalsIgnoreCase("white") ? -1 : 1;
-        int row = position.getRow();
-        int col = position.getColumn();
-        int attackRow = row + dir;
-
-        if (attackRow >= 0 && attackRow < 8)
-        {
-            if (col - 1 >= 0)
-            {
-                attacks.add(new Position(attackRow, col - 1));
-            }
-            if (col + 1 < 8)
-            {
-                attacks.add(new Position(attackRow, col + 1));
-            }
-        }
-
-        return attacks;
-    }
-
 }
